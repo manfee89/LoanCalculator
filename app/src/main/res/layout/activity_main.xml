@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="25dp"
+    android:orientation="vertical"
+    tools:context="com.manfee.loancalculator.MainActivity">
+
+    <EditText
+        android:id="@+id/editText_PurchasePrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Purchase Price (RM)"
+        android:inputType="number"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/editText_DownPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Down Payment (%)"
+        android:inputType="number" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_Percentage"
+        android:hint="Percentage"
+        android:inputType="numberDecimal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <SeekBar
+            android:id="@+id/seekBar_InterestRate"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="8"
+            android:max="10"
+            android:progress="5"/>
+
+        <TextView
+            android:id="@+id/textView_ShowInterestRate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="2"
+            />
+
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/editText_LoanTerm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Loan Term (Year)" />
+
+    <Button
+        android:id="@+id/button_Calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/textView_MonthlyRepay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="50sp" />
+</LinearLayout>
